@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand">Skt Spots</a>
+  <%= link_to "Skt Spots", root_path, class: "navbar-brand" %>
   <div class="form-inline">
      <% if user_signed_in? %>
         <a class="btn btn-outline-primary my-2 my-sm-0 mr-2" href="#">Profile</a>
