@@ -2,16 +2,11 @@
   <a class="navbar-brand">Skt Spots</a>
   <div class="form-inline">
      <% if user_signed_in? %>
-        <a class="nav-link dropdown-toggle" href="#" id="profileDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Profile
-        </a>
-        <div class="dropdown-menu" aria-labelledby="profileDropDown">
-          <a class="dropdown-item" href="#">Paramètres</a>
-          <a class="dropdown-item" href="#"><%= link_to "Déconnection", destroy_user_session_path, method: :delete %></a>
-        </div>
+        <a class="btn btn-outline-primary my-2 my-sm-0 mr-2" href="#">Profile</a>
+        <%= link_to "Déconnection", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
     <% else %>
-        <button class="btn btn-outline-primary my-2 my-sm-0 mr-2">Se connecter</button>
-        <button class="btn btn-success my-2 my-sm-0">S'inscrire</button>
+        <%= link_to "Se connecter", new_user_session_path, class: "btn btn-outline-primary my-2 my-sm-0 mr-2" %>
+        <%= link_to "S'inscrire", new_user_registration_path, class: "btn btn-success my-2 my-sm-0" %>
     <% end %> 
   </div>
 </nav>
