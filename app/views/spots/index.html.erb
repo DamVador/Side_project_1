@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+<p>Find me in app/views/spots/index.html.erb</p>
+
+
+<a href="<%= new_spot_path %>" class="btn">Créer un spot</a>
+
+<% @spots.each do |element| %>
+  <li><%= element.name %> a href="<%= spot_path(element.id) %>" class="btn">Voir le spot</a></li>
+  <li><%= element.latitude %></li>
+  <li><%= element.longitude %></li>
+  </br>
+<% end %>

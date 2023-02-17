@@ -1,0 +1,10 @@
+<h1>Spots#show</h1>
+<p>Find me in app/views/spots/show.html.erb</p>
+
+<h1><%= @spot.name %></h1>
+<h2><%= @spot.latitude %></h2>
+<h2><%= @spot.longitude %></h2>
+
+<a href="<%= edit_spot_path(@spot.id) %>" class="btn">Modifier le spot</a>
+
+<a href="<%= spot_path(@spot.id) %>" class="btn" data-confirm="êtes-vous sur?" data-method="DELETE">Supprimer le spot</a>
