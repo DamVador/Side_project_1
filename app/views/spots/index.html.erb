@@ -2,9 +2,12 @@
 
 <!-- Services-->
 <% if user_signed_in? %>
+    <div id="map">
+    </div>
     <%= link_to "Créer un spot", new_spot_path, class: "btn btn-success" %>
     <% @spots.each do |element| %>
-    <li><%= element.name %> a href="<%= spot_path(element.id) %>" class="btn">Voir le spot</a></li>
+    <li><%= element.name %> 
+    <%= link_to "Voir le spot", spot_path(element.id), class: "btn" %>
     <li><%= element.latitude %></li>
     <li><%= element.longitude %></li>
     </br>
