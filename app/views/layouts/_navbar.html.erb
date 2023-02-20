@@ -3,7 +3,7 @@
   <div class="form-inline">
      <% if user_signed_in? %>
         <a class="btn btn-outline-primary my-2 my-sm-0 mr-2" href="#">Profile</a>
-        <%= link_to "Déconnection", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
+        <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
     <% else %>
         <%= link_to "Se connecter", new_user_session_path, class: "btn btn-outline-primary my-2 my-sm-0 mr-2" %>
         <%= link_to "S'inscrire", new_user_registration_path, class: "btn btn-success my-2 my-sm-0" %>
