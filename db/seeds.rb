@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 Movie.destroy_all
+Spot.destroy_all
 
 g = ["action", "horreur", "comédie", "drame"]
 
@@ -22,3 +23,27 @@ g = ["action", "horreur", "comédie", "drame"]
         already_seen: false
     )
 end
+
+Spot.create!(
+    name: "Ximen reverside", 
+    latitude: 25.0494512, 
+    longitude: 121.5016743
+)
+
+Spot.create!(
+    name: "Daan Park", 
+    latitude: 25.032463, 
+    longitude: 121.5208464
+)
+
+Spot.create!(
+    name: "Youth Park", 
+    latitude: 25.0207203, 
+    longitude: 121.4869551
+)
+
+Spot.create!(
+    name: "Huashan Creative Park", 
+    latitude: 25.043782, 
+    longitude: 121.5277514
+)
