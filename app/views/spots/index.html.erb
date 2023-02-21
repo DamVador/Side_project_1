@@ -1,9 +1,10 @@
-
-
-<!-- Services-->
 <% if user_signed_in? %>
-    <div id="map">
+    <div class="container-fluid bg-secondary text-center py-5">
+        <div class="mx-5" id="map" style="min-height:300px; height: calc(100vh - 6rem - 112px);">
+        </div>
     </div>
+
+    <!-- 
     <%= link_to "Créer un spot", new_spot_path, class: "btn btn-success" %>
     <% @spots.each do |element| %>
     <li><%= element.name %> 
@@ -12,6 +13,7 @@
     <li><%= element.longitude %></li>
     </br>
     <% end %>
+    -->
 <% else %>
  <section class="bg-light">
     <div class="container">
@@ -110,13 +112,5 @@
 </section>
 <% end %> 
 
-<!-- 
-<a href="<%= new_spot_path %>" class="btn">Créer un spot</a>
-
-<% @spots.each do |element| %>
-  <li><%= element.name %> a href="<%= spot_path(element.id) %>" class="btn">Voir le spot</a></li>
-  <li><%= element.latitude %></li>
-  <li><%= element.longitude %></li>
-  </br>
-<% end %>
--->
+<%= javascript_pack_tag 'indexMap' %>
+<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAP_API_KEY"]}&callback=initMap" %>
