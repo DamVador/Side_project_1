@@ -1,7 +1,10 @@
 function initMap() {
+    const taipeiPosition = {lat: 25.03750, lng: 121.56250}
+    const initialCenter = new google.maps.LatLng(taipeiPosition.lat, taipeiPosition.lng);
+
     const map = new google.maps.Map(document.getElementById("map"), {
+      center: initialCenter,
       zoom: 12,
-      center: { lat: -28.643387, lng: 153.612224 },
       mapTypeControl: true,
       mapTypeControlOptions: {
         style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
@@ -19,15 +22,15 @@ function initMap() {
       fullscreenControl: true,
     });
 
-    // spots.forEach(port => {
-    //   const marker = new google.maps.Marker({
-    //     position: { lat: +port.latitude, lng: +port.longitude },
-    //     map,
-    //     icon: SVGPortIcon,
-    //     title: port.name,
-    //     label: port.slug,
-    //     zIndex: 10
-    //   })
+    gon.spots.forEach(spot => {
+      const marker = new google.maps.Marker({
+        position: { lat: +spot.latitude, lng: +spot.longitude },
+        map,
+        //icon: SVGPortIcon,
+        title: spot.name,
+        zIndex: 10
+      })
+    })
 }
   
-  window.initMap = initMap;
+window.initMap = initMap;

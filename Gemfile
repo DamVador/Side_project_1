@@ -7,6 +7,7 @@ gem 'faker'
 gem 'bootstrap'
 gem 'devise'
 gem 'dotenv-rails'
+gem 'gon'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.2'

@@ -111,6 +111,6 @@
     </div>
 </section>
 <% end %> 
-
+<%= content_tag :div, '', id: 'main', data: { source: @spots } %>
 <%= javascript_pack_tag 'indexMap' %>
 <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP_API_KEY']}&callback=initMap" %>
