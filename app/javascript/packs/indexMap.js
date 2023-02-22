@@ -18,6 +18,16 @@ function initMap() {
       },
       fullscreenControl: true,
     });
-  }
+
+    // spots.forEach(port => {
+    //   const marker = new google.maps.Marker({
+    //     position: { lat: +port.latitude, lng: +port.longitude },
+    //     map,
+    //     icon: SVGPortIcon,
+    //     title: port.name,
+    //     label: port.slug,
+    //     zIndex: 10
+    //   })
+}
   
   window.initMap = initMap;
